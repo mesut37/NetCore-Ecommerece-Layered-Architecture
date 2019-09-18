@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Etrade App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- all CSS hear -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/mainmenu.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <div class="wrapper home-3">
+        <header>
+            <!-- header-area start -->
+            <div class="header-area bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <!-- logo start -->
+                            <div class="logo">
+                                <a href="/"><img src="/img/logo/logo.png" alt=""></a>
+                            </div>
+                            <!-- logo end -->
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <!-- top-search-area start -->
+                            <div class="top-search-area shearch-three">
+
+                                @await Component.InvokeAsync("HomeCategories")
+                            </div>
+                            <!-- top-search-area end -->
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <!-- header-cart-box start -->
+                            <div class="header-cart-box">
+                                <!-- setting-account start -->
+                                <div class="setting-account">
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="btn-group">
+                                            <button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                ( @User.Identity.Name ) <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li><a href="#">Siparişlerim</a></li>
+                                                    <li><a href="#">Hesap İşlemleri</a></li>
+                                                    <li><a href="#">Fatura Bilgileri</a></li>
+                                                    <li><a asp-controller="Account" asp-action="LogOff">  Çıkış Yap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn-group">
+                                            <button class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Giriş/Kayıt Ol <i class="fa fa-angle-down"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li><a href="#">Kayıt Ol</a></li>
+                                                    <li><a href="#">Giriş Yap</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    }
+
+
+
+
+                                </div>
+                                <!-- setting-account end -->
+                                <!-- top-shopoing-cart start -->
+                                @await Component.InvokeAsync("CartSummary")
+                                <!-- top-shopoing-cart end -->
+                            </div>
+                            <!-- header-cart-box end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-area end -->
+            <!-- main-menu-area start -->
+            <div class="main-menu-area sticky-header border--top bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <div class="all-categories-menu-area categories-style-three">
+                                <div class="categories-toggler-menu togoler-style-3">
+                                    <i class="icon-left ion-navicon-round"></i>
+                                    <span> Tüm Kategoriler </span>
+                                    <i class="icon-right ion-android-arrow-dropdown"></i>
+                                </div>
+                                @await Component.InvokeAsync("CategoryList")
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main-menu menu-style-3 d-none d-lg-block">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">Home</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">Page</a>
+                                            <ul class="mega-menu">
+                                                <li>
+                                                    <a href="#">Column One</a>
+                                                    <ul>
+                                                        <li><a href="my-account.html">My Account</a></li>
+                                                        <li><a href="frequently-question.html">FAQ</a></li>
+                                                        <li><a href="login-register.html">Login &amp; Register</a></li>
+                                                        <li><a href="error404.html">Error 404</a></li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="contact.html">Contact us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Mobile Menu Area Start -->
+                    <div class="mobile-menu-area d-block d-lg-none">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                        <ul>
+                                            <li><a href="index.html">Home Page 1</a></li>
+                                            <li><a href="index-2.html">Home Page 2</a></li>
+                                            <li><a href="index-3.html">Home Page 3</a></li>
+                                            <li><a href="index-4.html">Home Page 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">Page</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Column One</a>
+                                                <ul>
+                                                    <li><a href="my-account.html">My Account</a></li>
+                                                    <li><a href="frequently-question.html">FAQ</a></li>
+                                                    <li><a href="login-register.html">Login &amp; Register</a></li>
+                                                    <li><a href="error404.html">Error 404</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Column Two</a>
+                                                <ul>
+                                                    <li><a href="blog-left.html">Blog Left</a></li>
+                                                    <li><a href="blog.html">Blog Right</a></li>
+                                                    <li><a href="blog-fullwidth.html">Blog Full Width</a></li>
+                                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Column Three</a>
+                                                <ul>
+                                                    <li><a href="shop.html">Shop Left</a></li>
+                                                    <li><a href="shop-right.html">Shop Right</a></li>
+                                                    <li><a href="shop-fullwidth.html">Shop Full Width</a></li>
+                                                    <li><a href="wishlist.html">Wish List</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Area End -->
+                </div>
+            </div>
+            <!-- main-menu-area end -->
+            <!-- mobile-categorei-menu start -->
+            <div class="bg-black mpb-30">
+                <div class="container d-block d-lg-none ">
+                    <div class="vertical-menu">
+                        <span class="categorie-title mobile-categorei-menu">all Categories</span>
+                        <nav>
+                            <div class="category-menu sidebar-menu sidbar-style mobile-categorei-menu-list menu-hidden " id="cate-mobile-toggle">
+                                <ul>
+                                    <li class="has-sub">
+                                        <a href="#">Books & Audible </a>
+                                        <ul class="category-sub">
+                                            <li class="has-sub">
+                                                <a href="shop.html">Boots</a>
+                                                <ul class="category-sub">
+                                                    <li><a href="shop.html">Hoodies</a></li>
+                                                    <li><a href="shop.html">Sweaters</a></li>
+                                                    <li><a href="shop.html">Vests</a></li>
+                                                    <li><a href="shop.html">Wedges</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="shop.html">Rings</a>
+                                                <ul class="category-sub">
+                                                    <li><a href="shop.html">Casual</a></li>
+                                                    <li><a href="shop.html">Chinos </a></li>
+                                                    <li><a href="shop.html">Joggers</a></li>
+                                                    <li><a href="shop.html">Tailored</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li class="has-sub">
+                                        <a href="#">Movies, Music & Games </a>
+                                        <ul class="category-sub">
+                                            <li class="menu-tile">CAMERA</li>
+                                            <li><a href="shop.html">Long Sleeve</a></li>
+                                            <li><a href="shop.html">Polo Short Sleeve</a></li>
+                                            <li><a href="shop.html">Short Sleeve</a></li>
+                                            <li><a href="shop.html">Sleeveles</a></li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li class="has-sub">
+                                        <a href="#">Headphones</a>
+                                        <ul class="category-sub">
+                                            <li><a href="shop.html">Hoodies</a></li>
+                                            <li><a href="shop.html">Jackets & Coats</a></li>
+                                            <li><a href="shop.html">Sweaters</a></li>
+                                            <li><a href="shop.html">Tops & Teesr</a></li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li class="has-sub">
+                                        <a href="#">MOBILE</a>
+                                        <ul class="category-sub">
+                                            <li><a href="shop.html">MOBILE</a></li>
+                                            <li><a href="shop.html">Graphic T-Shirts</a></li>
+                                            <li><a href="shop.html">Hoodies</a></li>
+                                            <li><a href="shop.html">Polo Short Sleeve</a></li>
+                                            <li><a href="shop.html">Sleeveles</a></li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li class="has-sub">
+                                        <a href="#">TABLET & ACCESSORIES</a>
+                                        <ul class="category-sub">
+                                            <li><a href="shop.html">Hoodies</a></li>
+                                            <li><a href="shop.html">Sweaters</a></li>
+                                            <li><a href="shop.html">Vests</a></li>
+                                            <li><a href="shop.html">Wedges</a></li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li>
+                                        <a href="#">Home, Garden, Pets & Tools </a>
+                                        <ul class="category-sub">
+                                            <li class="has-sub">
+                                                <a href="shop.html">Boots</a>
+                                                <ul class="category-sub">
+                                                    <li><a href="shop.html">Hoodies</a></li>
+                                                    <li><a href="shop.html">Sweaters</a></li>
+                                                    <li><a href="shop.html">Vests</a></li>
+                                                    <li><a href="shop.html">Wedges</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="shop.html">Rings</a>
+                                                <ul class="category-sub">
+                                                    <li><a href="shop.html">Casual</a></li>
+                                                    <li><a href="shop.html">Chinos </a></li>
+                                                    <li><a href="shop.html">Joggers</a></li>
+                                                    <li><a href="shop.html">Tailored</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- category submenu end-->
+                                    </li>
+                                    <li><a href="#">Fashion & Jewelry</a></li>
+                                    <li><a href="#">Sports & Outdoors</a></li>
+                                </ul>
+                            </div>
+                            <!-- category-menu-end -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile-categorei-menu end -->
+
+        </header>
+        @if (TempData["message"] != null)
+        {
+            <p>@TempData["message"]</p>
+        }
+
+
+        <!-- slider-main-area start -->
+        @RenderBody()
+        <!-- section-row end -->
+
+        <footer>
+            <!-- about-corporate-area start -->
+            <div class="about-corporate-area bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-0-sub">
+                            <!-- single-corporate start -->
+                            <div class="single-corporate">
+                                <div class="corporate-icon">
+                                    <i class="ion-ios-timer-outline"></i>
+                                </div>
+                                <div class="corporate-text-des">
+                                    <h3>Mon - Fri / 8:00 - 18:00</h3>
+                                    <p>Working Days/Hours!</p>
+                                </div>
+                            </div>
+                            <!-- single-corporate end -->
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-0-sub">
+                            <!-- single-corporate start -->
+                            <div class="single-corporate">
+                                <div class="corporate-icon">
+                                    <i class="ion-ios-telephone"></i>
+                                </div>
+                                <div class="corporate-text-des">
+                                    <h3>+88 12 345 6789</h3>
+                                    <p>Free support line!</p>
+                                </div>
+                            </div>
+                            <!-- single-corporate end -->
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-0-sub">
+                            <!-- single-corporate start -->
+                            <div class="single-corporate">
+                                <div class="corporate-icon">
+                                    <i class="ion-email"></i>
+                                </div>
+                                <div class="corporate-text-des">
+                                    <h3>Support@gmail.com</h3>
+                                    <p>Orders Support!</p>
+                                </div>
+                            </div>
+                            <!-- single-corporate end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about-corporate-area end -->
+            <!-- footer-top start -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-title">
+                                <h5>CONTACT INFO</h5>
+                            </div>
+                            <div class="footer-content">
+                                <p class="des">
+                                    We are a team of designers and developers that
+                                    create high quality Magento, Prestashop, Opencart.
+                                </p>
+                                <ul class="footer-contact">
+                                    <li class="adress">
+                                        <i class="ion-ios-location"></i> <p>
+                                            The Barn, Ullenhall, Henley in Arden
+                                            B578 5CC, England
+                                        </p>
+                                    </li>
+                                    <li class="phone"><i class="ion-ios-telephone"></i> <p> +123.456.789 - +123.456.678</p></li>
+                                    <li class="email"><i class="ion-android-mail"></i> <p>support@plazathemes.com</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-title">
+                                <h5>From Our blog</h5>
+                            </div>
+                            <div class="home-blog">
+                                <div class="articles-cont-active owl-carousel">
+                                    <div class="articles-container">
+                                        <div class="articles-inner">
+                                            <div class="articles-image">
+                                                <a href="blog-details.html">
+                                                    <img src="/img/blog/s-1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="aritcles-content">
+                                                <a href="blog-details.html">Back To Basics- Black Denim</a>
+                                                <div class="articles-date">Oct <span>03</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="articles-inner">
+                                            <div class="articles-image">
+                                                <a href="blog-details.html">
+                                                    <img src="/img/blog/s-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="aritcles-content">
+                                                <a href="blog-details.html">Back To Basics- Black Denim</a>
+                                                <div class="articles-date">Oct <span>10</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="articles-container">
+                                        <div class="articles-inner">
+                                            <div class="articles-image">
+                                                <a href="blog-details.html">
+                                                    <img src="/img/blog/s-1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="aritcles-content">
+                                                <a href="blog-details.html">Back To Basics- Black Denim</a>
+                                                <div class="articles-date">Oct <span>03</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="articles-inner">
+                                            <div class="articles-image">
+                                                <a href="blog-details.html">
+                                                    <img src="/img/blog/s-2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="aritcles-content">
+                                                <a href="blog-details.html">Back To Basics- Black Denim</a>
+                                                <div class="articles-date">Oct <span>10</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-item-mg">
+                            <div class="footer-title">
+                                <h5>Information</h5>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="footer-list">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Delivery Information</a></li>
+                                    <li><a href="#">Privacy Policy </a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Gift Certificates</a></li>
+                                    <li><a href="#">Affiliate</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-item-mg">
+                            <div class="footer-title">
+                                <h5>Customer Service</h5>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="footer-list">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Returns</a></li>
+                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="#"> Order History</a></li>
+                                    <li><a href="#">Wish List</a></li>
+                                    <li><a href="#">  Newsletter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-item-mg">
+                            <div class="footer-title">
+                                <h5>Extras</h5>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="footer-list">
+                                    <li><a href="#">Brands</a></li>
+                                    <li><a href="#">Gift Certificates</a></li>
+                                    <li><a href="#">Affiliate </a></li>
+                                    <li><a href="#">Specials</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-top end -->
+            <!-- footer-bottom start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="footer-copyright">
+                                <p>Copyright &copy; 2018 <a href="#">PaloraThemes</a>. All Right Reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5">
+                            <div class="footer-payment">
+                                <a href="#"><img src="/img/icon/payment.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom end -->
+        </footer>
+
+
+        <!-- Modal -->
+
+
+
+    </div>
+
+
+    <!-- jquery -->
+    <script src="/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- all plugins JS hear -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.mainmenu.js"></script>
+    <script src="/js/ajax-email.js"></script>
+    <script src="/js/plugins.js"></script>
+    <!-- main JS -->
+    <script src="/js/main.js"></script>
+
+    <script src="/js/vendor/jquery.validate.js"></script>
+    <script src="/js/vendor/jquery.validate.unobtrusive.js"></script>
+</body>
+
+</html>

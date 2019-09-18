@@ -1,0 +1,12 @@
+﻿@model EtradeApp.MvcWebUI.Models.CategoryListViewModel
+
+<div class="vertical-menu-list">
+    <ul>
+        @foreach (var category in Model.categories)
+        {
+            <li><a href="/urunler/@category.CategoryId">@category.CategoryName </a></li>
+
+        }
+        
+    </ul>
+</div>

@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from themicon.co/theme/angle/v4.5/static-html/app/ecommerce-products.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2019 08:26:59 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Angle - Bootstrap Admin Template</title><!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="/admin/vendor/@@fortawesome/fontawesome-free/css/brands.css">
+    <link rel="stylesheet" href="/admin/vendor/@@fortawesome/fontawesome-free/css/regular.css">
+    <link rel="stylesheet" href="/admin/vendor/@@fortawesome/fontawesome-free/css/solid.css">
+    <link rel="stylesheet" href="/admin/vendor/@@fortawesome/fontawesome-free/css/fontawesome.css"><!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="/admin/vendor/simple-line-icons/css/simple-line-icons.css"><!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="/admin/vendor/animate.css/animate.css"><!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="/admin/vendor/whirl/dist/whirl.css"><!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- Datatables-->
+    <link rel="stylesheet" href="/admin/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/admin/vendor/datatables.net-keytable-bs/css/keyTable.bootstrap.css">
+    <link rel="stylesheet" href="/admin/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.css"><!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="/admin/css/bootstrap.css" id="bscss"><!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="/admin/css/app.css" id="maincss">
+    <link rel="stylesheet" href="/admin/vendor/chosen-js/chosen.css"><!-- DATETIMEPICKER-->
+    <link rel="stylesheet" href="/admin/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.css"><!-- COLORPICKER-->
+    <link rel="stylesheet" href="/admin/vendor/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css"><!-- SELECT2-->
+    <link rel="stylesheet" href="/admin/vendor/select2/dist/css/select2.css">
+    <link rel="stylesheet" href="/admin/vendor/%40ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css"><!-- WYSIWYG-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar-->
+            <nav class="navbar topnavbar">
+                <!-- START navbar header-->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">
+                        <div class="brand-logo"><img class="img-fluid" src="/admin/img/logo.png" alt="App Logo"></div>
+                        <div class="brand-logo-collapsed"><img class="img-fluid" src="/admin/img/logo-single.png" alt="App Logo"></div>
+                    </a>
+                </div><!-- END navbar header-->
+                <!-- START Left navbar-->
+                <ul class="navbar-nav mr-auto flex-row">
+                    <li class="nav-item">
+                        <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops--><a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed"><em class="fas fa-bars"></em></a><!-- Button to show/hide the sidebar on mobile. Visible on mobile only.--><a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true"><em class="fas fa-bars"></em></a>
+                    </li><!-- START User avatar toggle-->
+
+                    @await Component.InvokeAsync("AdminUserSummary")
+                    <!-- START lock screen-->
+
+                </ul><!-- END Left navbar-->
+                <!-- START Right Navbar-->
+                <ul class="navbar-nav flex-row">
+                    <!-- Search icon-->
+                    <li class="nav-item"><a class="nav-link" href="#" data-search-open=""><em class="icon-magnifier"></em></a></li><!-- Fullscreen (only desktops)-->
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="#" data-toggle-fullscreen=""><em class="fas fa-expand"></em></a></li><!-- START Alert menu-->
+                    <li class="nav-item dropdown dropdown-list" style="margin-right:10px;">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown"><em class="icon-bell"></em><span class="badge badge-danger">11</span></a><!-- START Dropdown menu-->
+                        <div class="dropdown-menu dropdown-menu-right animated flipInX">
+                            <div class="dropdown-item">
+                                <!-- START list group-->
+                                <div class="list-group">
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2"><em class="fab fa-twitter fa-2x text-info"></em></div>
+                                            <div class="media-body">
+                                                <p class="m-0">New followers</p>
+                                                <p class="m-0 text-muted text-sm">1 new follower</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2"><em class="fas fa-envelope fa-2x text-warning"></em></div>
+                                            <div class="media-body">
+                                                <p class="m-0">New e-mails</p>
+                                                <p class="m-0 text-muted text-sm">You have 10 new emails</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2"><em class="fas fa-tasks fa-2x text-success"></em></div>
+                                            <div class="media-body">
+                                                <p class="m-0">Pending Tasks</p>
+                                                <p class="m-0 text-muted text-sm">11 pending task</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- last list item-->
+                                    <div class="list-group-item list-group-item-action"><span class="d-flex align-items-center"><span class="text-sm">More notifications</span><span class="badge badge-danger ml-auto">14</span></span></div>
+                                </div><!-- END list group-->
+                            </div>
+                        </div><!-- END Dropdown menu-->
+                    </li><!-- END Alert menu-->
+                    <!-- START Offsidebar button-->
+                    <!-- END Offsidebar menu-->
+                </ul><!-- END Right Navbar-->
+                <!-- START Search form-->
+                <form class="navbar-form" role="search" action="http://themicon.co/theme/angle/v4.5/static-html/app/search.html">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Type and hit enter ...">
+                        <div class="fas fa-times navbar-form-close" data-search-dismiss=""></div>
+                    </div><button class="d-none" type="submit">Submit</button>
+                </form><!-- END Search form-->
+            </nav><!-- END Top Navbar-->
+        </header><!-- sidebar-->
+        <aside class="aside-container">
+            <!-- START Sidebar (left)-->
+            <div class="aside-inner">
+                <nav class="sidebar" data-sidebar-anyclick-close="">
+                    <!-- START sidebar nav-->
+                    <ul class="sidebar-nav">
+                        <!-- START user info-->
+                        <!-- Iterates over all sidebar items-->
+                        <li class="nav-heading "><span data-localize="sidebar.heading.HEADER">Ürün Yönetimi</span></li>
+                       
+                    <li>
+                            <a href="#category"  data-toggle="collapse">
+                                <em class="icon-grid"></em><span data-localize="sidebar.nav.DASHBOARD">Kategoriler</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="category">
+                                <li class="sidebar-subnav-header">Dashboard</li>
+                                <li><a asp-controller="AdminCategory" asp-action="Index" ><span><em class="fa-xs mr-2 fas fa-caret-right"></em> Tüm Kategoriler</span></a></li>
+                                <li><a asp-controller="AdminCategory" asp-action="Add" ><span><em class="fa-xs mr-2 fas fa-caret-right"></em> Kategori Ekle</span></a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class=" ">
+                            <a href="#dashboard" title="Dashboard" data-toggle="collapse">
+                                <em class="icon-grid"></em><span data-localize="sidebar.nav.DASHBOARD">Ürünler</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
+                                <li class="sidebar-subnav-header">Dashboard</li>
+                                <li class=" "><a asp-controller="AdminProduct" asp-action="Index"><span><em class="fa-xs mr-2 fas fa-caret-right"></em> Tüm Ürünler</span></a></li>
+                                <li class=" "><a asp-controller="AdminProduct" asp-action="Add" ><span><em class="fa-xs mr-2 fas fa-caret-right"></em> Ürün Ekle</span></a></li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul><!-- END sidebar nav-->
+                </nav>
+            </div><!-- END Sidebar (left)-->
+        </aside><!-- offsidebar-->
+        @if (TempData["message"] != null)
+        {
+            <p>@TempData["message"]</p>
+        }
+
+        @RenderBody()<!-- Page footer-->
+        <footer class="footer-container"><span>&copy; 2019 - Angle</span></footer>
+    </div><!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- MODERNIZR-->
+    <script src="/admin/vendor/chosen-js/chosen.jquery.js"></script><!-- SLIDER CTRL-->
+    <script src="/admin/vendor/bootstrap-slider/dist/bootstrap-slider.js"></script><!-- INPUT MASK-->
+    <script src="/admin/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script><!-- COLORPICKER-->
+    <script src="/admin/vendor/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script><!-- SELECT2-->
+    <script src="/admin/vendor/select2/dist/js/select2.full.js"></script><!-- =============== APP SCRIPTS ===============-->
+
+    <script src="/admin/vendor/modernizr/modernizr.custom.js"></script><!-- STORAGE API-->
+    <script src="/admin/vendor/js-storage/js.storage.js"></script><!-- SCREENFULL-->
+    <script src="/admin/vendor/screenfull/dist/screenfull.js"></script><!-- i18next-->
+    <script src="/admin/vendor/i18next/i18next.js"></script>
+    <script src="/admin/vendor/i18next-xhr-backend/i18nextXHRBackend.js"></script>
+    @*<script src="/admin/vendor/jquery/dist/jquery.js"></script>*@
+    <script src="/admin/vendor/popper.js/dist/umd/popper.js"></script>
+    <script src="/admin/vendor/bootstrap/dist/js/bootstrap.js"></script><!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    <!-- Datatables-->
+    <script src="/admin/vendor/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="/admin/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons/js/dataTables.buttons.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons/js/buttons.colVis.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons/js/buttons.flash.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons/js/buttons.html5.js"></script>
+    <script src="/admin/vendor/datatables.net-buttons/js/buttons.print.js"></script>
+    <script src="/admin/vendor/datatables.net-keytable/js/dataTables.keyTable.js"></script>
+    <script src="/admin/vendor/datatables.net-responsive/js/dataTables.responsive.js"></script>
+    <script src="/admin/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script><!-- =============== APP SCRIPTS ===============-->
+    <script src="/admin/js/app.js"></script>
+    <script src="/js/vendor/jquery.validate.js"></script>
+    <script src="/js/vendor/jquery.validate.unobtrusive.js"></script>
+
+      <script>
+                            $(document).ready(function () {
+                                $("#categoryChoose").click(function () {
+                                    $("#div1").fadeIn();
+
+                                });
+
+
+                            });
+                            function changeCategory() {
+                                var value = $(".chosen-single").text();
+                                document.getElementById("parentName").innerHTML = value;
+                            }
+                        </script>
+</body>
+
+
+<!-- Mirrored from themicon.co/theme/angle/v4.5/static-html/app/ecommerce-products.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2019 08:26:59 GMT -->
+</html>

@@ -1,0 +1,12 @@
+﻿@model EtradeApp.MvcWebUI.Models.AdminUserDetailView
+
+@{
+}
+@if (!string.IsNullOrEmpty(Model.UserName))
+{
+    <li class="nav-item d-none d-md-block">
+        <a class="nav-link" id="user-block-toggle" data-toggle="collapse"><em class="icon-user" style="margin-right:5px;"></em>  Hoş Geldin @Model.UserName <strong>( Admin )</strong></a>
+    </li>
+
+    <li class="nav-item d-none d-md-block"><a class="nav-link" asp-controller="AdminAccount" asp-action="LogOff" title="Çıkış"><em class="icon-lock"></em> </a></li>
+}

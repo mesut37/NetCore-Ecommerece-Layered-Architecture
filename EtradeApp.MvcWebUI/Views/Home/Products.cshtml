@@ -1,0 +1,230 @@
+﻿@model EtradeApp.MvcWebUI.Models.ProductListViewModel
+
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumb-area bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Shop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wraper bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 order-2 order-lg-1">
+                <!-- filter-price start -->
+                <div class="filter-price sidebar-categores-box mt-60">
+                    <div class="secton-title">
+                        <h2>Price</h2>
+                    </div>
+                    <div class="filter-price-content">
+                        <form action="#" method="post">
+                            <div id="price-slider" class="price-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 13.7931%; width: 86.2069%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 13.7931%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span></div>
+                            <div class="filter-price-wapper">
+                                <div class="filter-price-cont">
+                                    <div class="input-type">
+                                        <input type="text" id="min-price" readonly="">
+                                    </div>
+                                    <span>—</span>
+                                    <div class="input-type">
+                                        <input type="text" id="max-price" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- filter-price end -->
+                <!-- categories-box start -->
+                <div class="categories-box sidebar-categores-box">
+                    <div class="secton-title">
+                        <h2>Categories</h2>
+                    </div>
+                    <div class="sidebar-categores-inner">
+                        <div class="filter-group">
+                            <a href="#">Categories1 (5)</a>
+                            <a href="#">Categories2 (8)</a>
+                            <a href="#">Categories3 (4)</a>
+                            <a href="#">Categories5 (4)</a>
+                            <a href="#">Categories6 (3)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- categories-box end -->
+                <!-- color-box start -->
+                <div class="color-box sidebar-categores-box">
+                    <div class="secton-title">
+                        <h2>Color</h2>
+                    </div>
+                    <div class="sidebar-categores-inner">
+                        <div class="filter-group">
+                            <a href="#">Green (5)</a>
+                            <a href="#">Pink (5)</a>
+                            <a href="#">Red (2)</a>
+                            <a href="#">White (11)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- color-box end -->
+                <!-- facture-box start -->
+                <div class="facture-box sidebar-categores-box">
+                    <div class="secton-title">
+                        <h2>Manufacturer</h2>
+                    </div>
+                    <div class="sidebar-categores-inner">
+                        <div class="filter-group">
+                            <a href="#">Christian Dior (8)</a>
+                            <a href="#">ferragamo (11)</a>
+                            <a href="#">hermes (10)</a>
+                            <a href="#">louis vuitton (11)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- facture-box end -->
+                <!-- single-benner start -->
+                <div class="single-benner mt-30 text-center">
+                    <a href="#">
+                        <img alt="" src="/img/benner/home-04-5.jpg">
+                    </a>
+                </div>
+                <!-- single-benner start -->
+            </div>
+            <div class="col-lg-9 order-1 order-lg-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="shop-top-bar mt-60">
+                            <div class="shop-bar-inner">
+                                <div class="product-view-mode">
+                                    <!-- shop-item-filter-list start -->
+                                    <ul role="tablist" class="nav shop-item-filter-list">
+                                        <li role="presentation" class="active"><a href="#grid" aria-controls="grid" role="tab" data-toggle="tab" class="active show" aria-selected="true"><i class="fa fa-th"></i></a></li>
+                                        <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab"><i class="fa fa-th-list"></i></a></li>
+                                    </ul>
+                                    <!-- shop-item-filter-list end -->
+                                </div>
+                                <div class="toolbar-amount">
+                                    <span>Showing 1 to 9 of 15</span>
+                                </div>
+                            </div>
+                            <div class="product-select-box">
+                                <div class="product-show">
+                                    <p>Show:</p>
+                                    <select class="nice-select" name="showing" style="display: none;">
+                                        <option value="1">8</option>
+                                        <option value="2">12</option>
+                                        <option value="3">16</option>
+                                        <option value="4">20</option>
+                                        <option value="5">24</option>
+                                    </select><div class="nice-select" tabindex="0"><span class="current">8</span><ul class="list"><li data-value="1" class="option selected">8</li><li data-value="2" class="option">12</li><li data-value="3" class="option">16</li><li data-value="4" class="option">20</li><li data-value="5" class="option">24</li></ul></div>
+                                </div>
+                                <div class="product-short">
+                                    <p>Sort By:</p>
+                                    <select class="nice-select" name="sortby" style="display: none;">
+                                        <option value="trending">Default</option>
+                                        <option value="sales">Name (A - Z)</option>
+                                        <option value="sales">Name (Z - A)</option>
+                                        <option value="rating">Price (Low &gt; High)</option>
+                                        <option value="date">Rating (Lowest)</option>
+                                        <option value="price-asc">Model (A - Z)</option>
+                                        <option value="price-asc">Model (Z - A)</option>
+                                    </select><div class="nice-select" tabindex="0"><span class="current">Default</span><ul class="list"><li data-value="trending" class="option selected">Default</li><li data-value="sales" class="option">Name (A - Z)</li><li data-value="sales" class="option">Name (Z - A)</li><li data-value="rating" class="option">Price (Low &gt; High)</li><li data-value="date" class="option">Rating (Lowest)</li><li data-value="price-asc" class="option">Model (A - Z)</li><li data-value="price-asc" class="option">Model (Z - A)</li></ul></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-products-wrapper">
+                    <div class="tab-content">
+                        <div id="grid" class="tab-pane fade active show" role="tabpanel">
+                            <div class="shop-product-wrap box-module">
+                                <div class="row">
+                                    @foreach (var product in Model.Products)
+                                    {
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <!-- sinle-product-item start -->
+                                            <div class="sinle-product-item mb-20">
+                                                <div class="product-thumb">
+                                                    <a href="/Home/Detail/@product.ProductId">
+                                                        <img class="primary-image" src="/img/product/4.jpg" alt="">
+                                                    </a>
+                                                    <div class="label-product">% 15</div>
+                                                    <div class="action-links ">
+
+
+                                                        <a class="action-btn btn-quickview" data-toggle="modal" data-target="#exampleModalCenter" href="#"> <i class="ion ion-ios-eye"></i></a>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <a class="btn-cart btn-yellow" asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@product.ProductId"><span> Sepete Ekle </span></a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <div class="rating-box">
+                                                        <ul class="rating d-flex">
+                                                            <li><i class="ion-ios-star"></i></li>
+                                                            <li><i class="ion-ios-star"></i></li>
+                                                            <li><i class="ion-ios-star"></i></li>
+                                                            <li><i class="ion-android-star-outline"></i></li>
+                                                            <li><i class="ion-android-star-outline"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                    <h4 class="product-name"><a href="single-product.html">@product.ProductName</a></h4>
+                                                    <div class="price-box">
+                                                        <span style="text-decoration: line-through; color: #939393; display: block;">4.999,00 <i class="fas fa-lira-sign"></i></span>
+                                                        <span class="new-price">@product.UnitPrice <i class="fas fa-lira-sign"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- sinle-product-item end -->
+                                        </div>
+                                    }
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- paginatoin-area start -->
+                        <div class="paginatoin-area">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <p>Showing 10-13 of 13 item(s) </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <product-list-pager page-size="@Model.PageSize" page-count="@Model.PageCount" current-category="@Model.CurrentCategory" current-page="@Model.CurrentPage"></product-list-pager>
+
+
+                                    @*<ul class="pagination-box">
+                                            <li>
+                                                <a href="#" class="Previous"> <i class="fa fa-angle-double-left"></i> </a>
+                                            </li>
+                                            <li><a href="#" class="active">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li>
+                                                <a href="#" class="Next"> <i class="fa fa-angle-double-right"></i> </a>
+                                            </li>
+                                        </ul>*@
+                                </div>
+                            </div>
+                        </div>
+                        <!-- paginatoin-area end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

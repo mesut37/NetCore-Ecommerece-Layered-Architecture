@@ -1,0 +1,19 @@
+﻿@model EtradeApp.Entities.Concrete.Cart
+    @{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h1>Index</h1>
+
+    @foreach (var item in Model.CartLines)
+    {
+        <table>
+            <tr>
+                <td>Ürün adı</td>
+            </tr>
+            <tr>
+                <td>@item.Product.ProductName</td>
+            </tr>
+        </table>
+    }

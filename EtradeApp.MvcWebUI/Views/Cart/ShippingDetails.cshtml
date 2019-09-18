@@ -1,0 +1,140 @@
+﻿@model EtradeApp.MvcWebUI.Models.ShippingDetailsViewModel
+@{
+    ViewData["Title"] = "ShippingDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+   
+</style>
+
+
+<script src="/js/vendor/jquery.min.js"></script>
+<script src="/js/vendor/jquery.unobtrusive-ajax.min.js"></script>
+
+<div class="breadcrumb-area bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ana Sayfa</font></font></a></li>
+                    <li class="breadcrumb-item active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sipariş Formu</font></font></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wraper bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="coupon-area">
+                    <div class="coupon-accordion">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                           
+                            <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Üyeliğiniz bulunuyor mu ? </font></font><span id="showlogin" class="coupon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a style="color:#e85757;" asp-controller="Account" asp-action="LoginUser" asp-route-ReturnUrl="/Cart/ShippingDetails"> Giriş yapmak için buraya tıklayın</a></font></font></span></h3>
+                        }
+                        @*<div id="checkout-login" class="coupon-content" style="display: none;">
+                                <div class="coupon-info">
+                                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha önce bizimle alışveriş yaptıysanız, lütfen bilgilerinizi aşağıdaki kutulara girin. </font><font style="vertical-align: inherit;">Eğer yeni bir müşteriyseniz, lütfen Fatura ve Nakliye bölümüne geçin.</font></font></p>
+                                    <form >
+                                        <p class="coupon-input form-row-first">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı adı veya e-posta </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+                                            <input type="text" name="email">
+                                        </p>
+                                        <p class="coupon-input form-row-last">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">şifre </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+                                            <input type="password" name="password">
+                                        </p>
+                                        <div class="clear"></div>
+                                        <p>
+                                            <button value="Login" name="login" class="button-login" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oturum aç</font></font></button>
+                                            <label><input type="checkbox" value="1"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beni Hatırla</font></font></span></label>
+                                            <br /> <br />   <a href="#" class="float-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifreni mi unuttun?</font></font></a>
+                                        </p>
+
+                                    </form>
+                                </div>
+                            </div>*@
+                    </div>
+
+                </div>
+                <!-- coupon-area end -->
+            </div>
+        </div>
+        <!-- checkout-area start -->
+        <div class="checkout-area">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <form asp-controller="Cart" asp-action="ShippingDetails" method="post">
+                                <div class="checkbox-form">
+                                    <h3 class="shoping-checkboxt-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fatura Detayları</font></font></h3>
+                                    <div class="row">
+
+                                        <div class="col-lg-6">
+                                            <p class="single-form-row">
+                                                <label>
+                                                    <label>İsim</label><br />
+                                                    <span asp-validation-for="ShippingDetail.FirstName"></span>
+                                                </label>
+                                                <input type="text" asp-for="ShippingDetail.FirstName" />
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="single-form-row">
+                                                <label>
+                                                    <label>Soyisim</label><br />
+                                                    <span asp-validation-for="ShippingDetail.LastName"></span>
+                                                </label><br />
+                                                <input type="text" asp-for="ShippingDetail.LastName" />
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p class="single-form-row">
+                                                <label>Şehir</label>
+                                                <input type="text" asp-for="ShippingDetail.City"><br />
+                                                <span asp-validation-for="ShippingDetail.City"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p class="single-form-row">
+                                                <label>Email</label>
+                                                <input type="text" asp-for="ShippingDetail.Email"><br />
+                                                <span asp-validation-for="ShippingDetail.Email"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p class="single-form-row">
+                                                <label>Telefon</label>
+                                                <input type="text" asp-for="ShippingDetail.Phone">
+                                                <span asp-validation-for="ShippingDetail.Phone"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <p class="single-form-row">
+                                                <label>Adres</label>
+                                                <textarea asp-for="ShippingDetail.Adress" cols="5" rows="2" class="checkout-mess" placeholder="Adres"></textarea>
+                                                <span asp-validation-for="ShippingDetail.Adress"></span>
+                                            </p>
+                                        </div>
+                                       
+                                      
+                                        <button value="Login" name="login" class="button-checkout" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ödemeyi tamamla</font></font></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        @await Component.InvokeAsync("ShippingCartSummary")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- checkout-area end -->
+    </div>
+</div>
+

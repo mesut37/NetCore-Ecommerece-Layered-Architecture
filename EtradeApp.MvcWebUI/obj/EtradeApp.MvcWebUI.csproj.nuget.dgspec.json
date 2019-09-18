@@ -1,0 +1,360 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.MvcWebUI\\EtradeApp.MvcWebUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\EtradeApp.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\EtradeApp.Business.csproj",
+        "projectName": "EtradeApp.Business",
+        "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\EtradeApp.Business.csproj",
+        "packagesPath": "C:\\Users\\mesut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mesut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj"
+              },
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj"
+              },
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj",
+        "projectName": "EtradeApp.Core",
+        "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj",
+        "packagesPath": "C:\\Users\\mesut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mesut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj",
+        "projectName": "EtradeApp.DataAccess",
+        "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mesut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mesut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj"
+              },
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "HomeBi.Libraries.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[0.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj",
+        "projectName": "EtradeApp.Entities",
+        "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\EtradeApp.Entities.csproj",
+        "packagesPath": "C:\\Users\\mesut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mesut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.MvcWebUI\\EtradeApp.MvcWebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.MvcWebUI\\EtradeApp.MvcWebUI.csproj",
+        "projectName": "EtradeApp.MvcWebUI",
+        "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.MvcWebUI\\EtradeApp.MvcWebUI.csproj",
+        "packagesPath": "C:\\Users\\mesut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.MvcWebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mesut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\EtradeApp.Business.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Business\\EtradeApp.Business.csproj"
+              },
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.Core\\EtradeApp.Core.csproj"
+              },
+              "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mesut\\Desktop\\ETradeApp\\ETradeApp\\EtradeApp.DataAccess\\EtradeApp.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

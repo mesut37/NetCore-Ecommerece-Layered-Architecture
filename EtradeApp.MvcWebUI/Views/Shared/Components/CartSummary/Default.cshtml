@@ -1,0 +1,76 @@
+﻿@model EtradeApp.MvcWebUI.Models.CartSummaryViewModel
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<div id="top-shopoing-cart" class="btn-group">
+    <button class="btn-link shopping-cart home-three dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="ion-ios-cart"></i>
+        <span class="top-cart-total">
+            <span id="cartCount" class="item-text-number">@Model.Cart.CartLines.Count()</span>
+            <span class="cart-text-items">Sepetim</span>
+        </span>
+    </button>
+    <div class="dropdown-menu">
+        <ul class="mini-cart-sub mini-cart-3">
+            @foreach (var product in Model.Cart.CartLines)
+            {
+               
+                <li class="single-cart" id="line-@product.Product.ProductId">
+                    <div class="cart-img">
+                        <a href="#"><img src="~/Uploads/Products/@product.PhotoUrl" width="100" alt=""></a>
+                    </div>
+                    <div class="cart-info">
+                        <a href="single-product.html">@product.Product.ProductName</a>
+                        <p class="cart-quantity">@product.Quantity</p>
+                        <p class="cart-price">@product.Product.UnitPrice</p>
+                    </div>
+                    <a class="cart-remove" onclick="deleteCart(@product.Product.ProductId);" title="Sepetten Kaldır"><i class="ion-ios-close-empty"></i></a>
+                </li>
+            }
+
+            @*<li class="cart-total-box">
+                    <h5>Sub-Total :<span class="float-right">$264.00</span></h5>
+                    <h5>Eco Tax (-2.00) :<span class="float-right">$4.00</span></h5>
+                    <h5>VAT (20%) :<span class="float-right">$52.80</span></h5>
+                    <h5>Total :<span class="float-right">$320.80</span></h5>
+                </li>*@
+            <li>
+                <p class="text-center cart-button">
+                    <a href="/Cart/List">Sepete Git</a>
+                    <a href="checkout.html">Satın Al</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function deleteCart(productId) {
+
+    
+       
+            $.ajax({
+                url: "/Cart/CartSummaryDelete",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    productId: productId
+                },
+                success: function (data) {
+                    var count = parseInt($("#cartCount").text());
+                    $("#cartCount").text(count - 1);
+
+                    setTimeout(function () {
+                        $("#line-" + productId).remove();
+
+                    }, 200)
+                    
+                }
+
+            });
+       
+
+
+    };
+
+</script>

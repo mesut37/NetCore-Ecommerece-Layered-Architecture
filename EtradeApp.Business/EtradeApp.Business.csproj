@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EtradeApp.Core\EtradeApp.Core.csproj" />
+    <ProjectReference Include="..\EtradeApp.DataAccess\EtradeApp.DataAccess.csproj" />
+    <ProjectReference Include="..\EtradeApp.Entity\EtradeApp.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

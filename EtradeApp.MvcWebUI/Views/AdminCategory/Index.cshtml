@@ -1,0 +1,57 @@
+﻿@model EtradeApp.MvcWebUI.Models.CategoryListViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<section class="section-container">
+    <!-- Page content-->
+    <div class="content-wrapper">
+
+        <div class="content-heading">
+            Kategoriler
+        </div>
+        <div class="text-left mt-3 mb-3">
+            <a class="btn btn-success" asp-controller="AdminCategory" asp-action="Add" id="add"> <em class="fa-sm mr-2 fas fa-plus"></em> Yeni Ekle</a>
+
+        </div>
+        <table class="table table-striped table-hover w-100" id="datatable1">
+
+            <thead>
+                <tr>
+                    <th style="width:80px"><strong>ID</strong></th>
+                    <th><strong>Kategori Adı</strong></th>
+                    <th><strong>Ebeveyn Kategorisi</strong></th>
+                    <th class="text-center"><strong>Durumu</strong></th>
+                    <th class="text-center"><strong>Eklenme Tarihi</strong></th>
+                    <th class="text-center"><strong>İşlem</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model.categories)
+                {
+                    <tr>
+                        <td>@category.CategoryId</td>
+                        <td>@category.CategoryName</td>
+                        <td>@((int.Parse(category.ParentId) == 0) ? "Ana Kategori" : "Alt Kategori")</td>
+                        <td class="text-center">@category.Status</td>
+                        <td class="text-center">04/10/2015</td>
+                        <td class="text-center">
+                            <a asp-controller="AdminCategory" asp-action="Update" asp-route-categoryId="@category.CategoryId" class="btn btn-sm btn-info mr-2 command-edit" data-row-id="10253"><em class="fa fa-edit fa-fw"></em></a>
+                            <a asp-controller="AdminCategory" asp-action="Delete" asp-route-categoryId="@category.CategoryId" class="btn btn-sm btn-danger command-delete" data-row-id="10253"><em class="fa fa-trash fa-fw"></em></a>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+    
+</section>
+
+    
+<script src="/admin/vendor/jquery/dist/jquery.js"></script>

@@ -1,0 +1,78 @@
+﻿@model EtradeApp.MvcWebUI.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "RegisterUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="breadcrumb-area bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active">Giriş Yap / Üye Ol</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wraper login-register-area bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6  col-md-6 col-sm-12">
+                <div class="customer-login-register">
+                    <h3>Kayıt Ol</h3>
+                    <div class="login-Register-info">
+                        <form asp-controller="Account" method="post">
+
+                            <p class="coupon-input form-row-first">
+                                <label>
+                                    <label>Email</label>
+                                    <span asp-validation-for="Email"></span>
+                                </label>
+                                <input type="text" asp-for="Email" />
+
+
+                            </p>
+                            <p class="coupon-input form-row-first">
+                                <label>
+                                    <label>Telefon</label>
+                                    <span asp-validation-for="Phone"></span>
+                                </label>
+                                <input type="text" asp-for="Phone" />
+                            </p>
+                            <p class="coupon-input form-row-first">
+                                <label>
+                                    <label>Kullanıcı Adı</label>
+                                    <span asp-validation-for="UserName"></span>
+                                </label>
+                                <input type="text" asp-for="UserName" />
+                            </p>
+                            <p class="coupon-input form-row-first">
+                                <label>
+                                    <label>Şifre</label>
+                                    <span asp-validation-for="Password"></span>
+                                </label>
+                                <input type="password" asp-for="Password" />
+                            </p>
+                            <p class="coupon-input form-row-first">
+                                <label>
+                                    <label>Şifre Tekrar</label>
+                                    <span asp-validation-for="ConfirmPassword"></span>
+                                </label>
+                                <input type="password" asp-for="ConfirmPassword" />
+                            </p>
+                            <div class="clear"></div>
+                            <p>
+                                <button class="button-login" type="submit">Kayıt Ol</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

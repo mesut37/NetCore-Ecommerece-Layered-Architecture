@@ -1,0 +1,36 @@
+﻿@model EtradeApp.MvcWebUI.Models.CategoryListViewModel
+<script src="/js/vendor/jquery-1.12.4.min.js"></script>
+<div class="search-categories">
+    <form asp-controller="Home" asp-action="Search" method="get">
+        <div class="search-form-input">
+            <select id="select" name="kategori" class="nice-select">
+                <option value="0">Tüm Kategoriler</option>
+                @foreach (var category in Model.categories)
+                {
+                    <option value="@category.CategoryId">@category.CategoryName</option>
+                }
+            </select>
+            <input type="text" id="search" name="kelime" placeholder="Ürün Ara...">
+            <button class="top-search-btn" id="btnSearch" type="submit"><i class="ion-ios-search-strong"></i></button>
+        </div>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnSearch").attr("disabled", true);
+
+
+        $("#search").change(function () {
+            if ($("#search").val().length >= 3) {
+
+                $("#btnSearch").attr("disabled", false);
+            }
+            else {
+                $("#btnSearch").attr("disabled", true);
+
+            }
+        });
+    });
+
+</script>
